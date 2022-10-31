@@ -13,7 +13,10 @@ export default function Sidebar({contents}) {
 
 const StyledSideBar = styled.div`
     background-color:${props => props.theme.dark.secondary};
+    display:flex; 
+    flex-direction: column;
     color: ${props => props.theme.dark.text};
-    height:100vh;
     width:25%;
+    margin:0 auto;
+    
 `

@@ -15,13 +15,15 @@ export default function Nav() {
 }
 
 const StyledNav = styled.div`
+    
     display:flex;
-    flex: 12 0 auto;
     justify-content: space-between;
     align-items:center;
     background-color:${props => props.theme.dark.primary};
     color: ${props => props.theme.dark.text};
-    padding:  0 10px;
+    height:40px;
+    width:100%;
+  
 ` 
 const StyledLogo = styled.p`
     align-self:center;

@@ -1,15 +1,13 @@
-import logo from './logo.svg';
 import './App.css';
-import { ThemeProvider } from 'styled-components';
-import styled from 'styled-components';
-import StyledNav from './components/nav';
-import Sidebar from './components/sidebar';
+import styled, { ThemeProvider } from 'styled-components';
 
+import Home from './pages/Home';
+import Login from './pages/Login';
 const theme = {
   dark: {
-    primary: '#462C20',
-    secondary: '#28221F',
-    accent : '#753A27',
+    primary: '#8E352F',
+    secondary: '#272727',
+    accent : '#C26258',
     background: '#1E1E1E',
     text: '#FFFFFF'
 }
@@ -17,35 +15,19 @@ const theme = {
 
 function App() {
   return (
+    <Container className="App">
     <ThemeProvider theme={theme}>
-    <div className="App">
-      <StyledNav/>
-      <StyledWindow>
-        <Sidebar contents = {
-          <div>
-          <p>test</p>
-          <p>test</p>
-          </div>
-        }/>
-        <Content>
-          
-        </Content>
-      </StyledWindow>
-       
-     
-    </div>
+    
+    <Home/>
+    {/* <Login/> */}
+
     </ThemeProvider>
+    </Container>
   );
 }
 
-const StyledWindow = styled.div`
-  display:flex;
-  flex-direction:row;
-`
-export default App;
-
-const Content = styled.div`
-  background-color:${props => props.theme.dark.background};
+const Container = styled.div`
   height:100vh;
-  width:75%;
 `
+
+export default App;
