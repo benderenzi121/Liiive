@@ -3,20 +3,9 @@ import styled from 'styled-components'
 
 export default function Sidebar({contents}) {
   return (
-    <StyledSideBar>
+    <div className='flex flex-col w-1/5 bg-secondary text-center'>
         {contents}
-    </StyledSideBar>
+    </div>
    
   )
 }
-
-
-const StyledSideBar = styled.div`
-    background-color:${props => props.theme.dark.secondary};
-    display:flex; 
-    flex-direction: column;
-    color: ${props => props.theme.dark.text};
-    width:25%;
-    margin:0 auto;
-    
-`

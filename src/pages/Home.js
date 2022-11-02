@@ -1,19 +1,17 @@
 import React, { Component } from 'react'
-import styled from 'styled-components';
-import Sidebar from '../components/sidebar';
-import Button from '../components/button';
-import Nav from '../components/nav';
+import Button from '../components/button'
+import LoginForm from '../components/loginForm'
+import Nav from '../components/nav'
+import Sidebar from '../components/sidebar'
+
 export default class Home extends Component {
   render() {
     return (
-      <Container>
+      <div className='display: flex flex-col h-screen bg-background text-gray-200 '>
         <Nav/>
-      <StyledWindow>
-    
-        <Sidebar contents = {
-          <span>
-          <h1>Rooms</h1>
-          <Button text ='Jazz' />
+        <span className='flex flex-row w-screen h-full'>
+        <Sidebar contents={<span className='flex flex-col m-5'>
+         <Button text ='Jazz' />
           <Button text ='Hip hop' />
           <Button text ='Techno' />
           <Button text ='House' />
@@ -21,30 +19,16 @@ export default class Home extends Component {
           <Button text ='Punk' /><Button text ='Jazz' />
           <Button text ='Alternative' />
           <Button text ='Easy Listening' />
-         </span>
-        }/>
-        <Content>
-          <h1>Join a Room on the Sidebar to start chatting!</h1>
-        </Content>
-      </StyledWindow>
-      </Container>
+        </span> } />
+          <div className='flex flex-row justify-center items-center text-center w-full'>
+            <h1>content</h1>
+          </div>
+          
+        </span>
+
+{/* 
+        <LoginForm/> */}
+      </div>
     )
   }
 }
-const StyledWindow = styled.div`
-  display:flex;
-  flex-direction:row;
-  height:100%;
-`
-
-
-const Content = styled.div`
-  background-color:${props => props.theme.dark.background};
-  width:75%;
-  color: ${props => props.theme.dark.text};
-`
-
-
-const Container = styled.div`
-  height:100%;
-`

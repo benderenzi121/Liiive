@@ -15,19 +15,17 @@ const theme = {
 
 function App() {
   return (
-    <Container className="App">
-    <ThemeProvider theme={theme}>
+    <div >
+    
     
     <Home/>
     {/* <Login/> */}
 
-    </ThemeProvider>
-    </Container>
+  
+    </div>
   );
 }
 
-const Container = styled.div`
-  height:100vh;
-`
+
 
 export default App;
